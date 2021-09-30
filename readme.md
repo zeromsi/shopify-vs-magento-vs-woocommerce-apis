@@ -84,3 +84,10 @@ The status of the product. Valid values:
 - active: The product is ready to sell and is available to customers on the online store, sales channels, and apps. By default, existing products are set to active.
 - archived: The product is no longer being sold and isn't available to customers on sales channels and apps.
 - draft: The product isn't ready to sell and is unavailable to customers on sales channels and apps. By default, duplicated and unarchived products are set to draft.
+
+# variants
+An array of product variants, each representing a different version of the product.
+The position property is read-only. The position of variants is indicated by the order in which they are listed.
+
+To manage variants: 
+Api doc: https://shopify.dev/api/admin-rest/2021-07/resources/product-variant#resource_object
