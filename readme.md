@@ -170,4 +170,8 @@ variant object:
 }
 ```
 
+# fulfillment_service
+The fulfillment service associated with the product variant. Valid values: manual or the handle of a fulfillment service.A Fulfillment Service is a third party warehouse that prepares and ships orders on behalf of the store owner. Fulfillment services charge a fee to package and ship items and update product inventory levels. Some well known fulfillment services with Shopify integrations include: Amazon, Shipwire, and Rakuten. When an app registers a new FulfillmentService on a store, Shopify automatically creates a Location that's associated to that fulfillment service.
 
+To manage fullfillment service:
+api doc: https://shopify.dev/api/admin-rest/2021-07/resources/fulfillmentservice#top
