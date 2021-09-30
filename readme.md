@@ -175,3 +175,22 @@ The fulfillment service associated with the product variant. Valid values: manua
 
 To manage fullfillment service:
 api doc: https://shopify.dev/api/admin-rest/2021-07/resources/fulfillmentservice#top
+
+# inventory_management
+The fulfillment service that tracks the number of items in stock for the product variant. Valid values:
+shopify: You are tracking inventory yourself using the admin.
+null: You aren't tracking inventory on the variant.
+the handle of a fulfillment service that has inventory management enabled: This must be the same fulfillment service referenced by the fulfillment_service property.
+
+# inventory_policy
+Whether customers are allowed to place an order for the product variant when it's out of stock. Valid values:
+deny: Customers are not allowed to place orders for the product variant if it's out of stock.
+continue: Customers are allowed to place orders for the product variant if it's out of stock.
+Default value: deny.
+
+# presentment_prices
+read-only
+A list of the variant's presentment prices and compare-at prices in each of the shop's enabled presentment currencies. Each price object has the following properties:
+currency_code: The three-letter code (ISO 4217 format) for one of the shop's enabled presentment currencies.
+amount: The variant's price or compare-at price in the presentment currency.
+Requires the header 'X-Shopify-Api-Features': 'include-presentment-prices'.
